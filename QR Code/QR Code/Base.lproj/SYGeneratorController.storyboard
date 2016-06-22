@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RY9-8y-OXp">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--生成二维码-->
+        <scene sceneID="fZT-LS-Y6l">
+            <objects>
+                <viewController title="生成二维码" id="RY9-8y-OXp" userLabel="生成二维码" customClass="SYGeneratorController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5q1-CJ-cY3"/>
+                        <viewControllerLayoutGuide type="bottom" id="gTl-Dg-4rB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gad-R8-gVa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Eg-2X-fWS">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.8009025528" green="0.82100129479999995" blue="0.83060796209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="TEe-pw-HUk"/>
+                                    <constraint firstAttribute="width" constant="200" id="mjd-f2-5hr"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7i6-J3-Jky">
+                                <rect key="frame" x="200" y="120" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-rH-qQ4">
+                                <rect key="frame" x="340" y="155" width="60" height="24"/>
+                                <color key="backgroundColor" red="0.8009025528" green="0.82100129479999995" blue="0.83060796209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="转换为二维码"/>
+                                <connections>
+                                    <action selector="switchQRCode" destination="RY9-8y-OXp" eventType="touchUpInside" id="G8d-Ze-Btr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Eg-2X-fWS" firstAttribute="top" secondItem="7i6-J3-Jky" secondAttribute="bottom" constant="50" id="6w9-pL-rER"/>
+                            <constraint firstItem="4Eg-2X-fWS" firstAttribute="centerY" secondItem="Gad-R8-gVa" secondAttribute="centerY" id="JGq-Vz-cTv"/>
+                            <constraint firstItem="7i6-J3-Jky" firstAttribute="trailing" secondItem="4Eg-2X-fWS" secondAttribute="trailing" id="Mc9-Dy-Cfl"/>
+                            <constraint firstItem="mpU-rH-qQ4" firstAttribute="trailing" secondItem="7i6-J3-Jky" secondAttribute="trailing" id="Y6U-WV-Beg"/>
+                            <constraint firstItem="4Eg-2X-fWS" firstAttribute="centerX" secondItem="Gad-R8-gVa" secondAttribute="centerX" id="u7i-7F-MQW"/>
+                            <constraint firstItem="mpU-rH-qQ4" firstAttribute="top" secondItem="7i6-J3-Jky" secondAttribute="bottom" constant="5" id="xgq-jR-p48"/>
+                            <constraint firstItem="7i6-J3-Jky" firstAttribute="leading" secondItem="4Eg-2X-fWS" secondAttribute="leading" id="yJb-Nc-xxp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Kwo-qa-hvX"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="QRCodeView" destination="4Eg-2X-fWS" id="iwy-x8-TXW"/>
+                        <outlet property="textLable" destination="7i6-J3-Jky" id="D8Q-il-mq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsm-mQ-6gc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="-666"/>
+        </scene>
+    </scenes>
+</document>

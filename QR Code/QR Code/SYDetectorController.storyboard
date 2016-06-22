@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qHP-pE-x0P">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--识别二维码-->
+        <scene sceneID="D99-ur-i9S">
+            <objects>
+                <viewController title="识别二维码" id="qHP-pE-x0P" customClass="SYDetectorController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ncY-yj-8Rl"/>
+                        <viewControllerLayoutGuide type="bottom" id="em7-Sp-4Fr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DTh-hs-X0B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oR2-G9-lxg">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.8009025528" green="0.82100129479999995" blue="0.83060796209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YJS-Mv-ns3"/>
+                                    <constraint firstAttribute="height" constant="200" id="nyA-tn-joD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="显示信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOe-QV-2o3">
+                                <rect key="frame" x="200" y="415" width="48" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MR-9R-aQl">
+                                <rect key="frame" x="200" y="161" width="30" height="29"/>
+                                <color key="backgroundColor" red="0.8009025528" green="0.82100129479999995" blue="0.83060796209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="相册"/>
+                                <connections>
+                                    <action selector="openPicture" destination="qHP-pE-x0P" eventType="touchUpInside" id="C2P-Fl-rz5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUA-p9-xTm">
+                                <rect key="frame" x="316" y="161" width="84" height="29"/>
+                                <color key="backgroundColor" red="0.8009025528" green="0.82100129479999995" blue="0.83060796209999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="转换成二维码"/>
+                                <connections>
+                                    <action selector="switchQRCode" destination="qHP-pE-x0P" eventType="touchUpInside" id="2Jd-Wn-x24"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W42-fJ-7PV">
+                                <rect key="frame" x="200" y="434.5" width="200" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oR2-G9-lxg" firstAttribute="centerY" secondItem="DTh-hs-X0B" secondAttribute="centerY" id="0IP-iw-Xkn"/>
+                            <constraint firstItem="oUA-p9-xTm" firstAttribute="bottom" secondItem="6MR-9R-aQl" secondAttribute="bottom" id="7cU-FC-Yrm"/>
+                            <constraint firstItem="lOe-QV-2o3" firstAttribute="top" secondItem="oR2-G9-lxg" secondAttribute="bottom" constant="15" id="9BD-7z-Fbx"/>
+                            <constraint firstItem="oUA-p9-xTm" firstAttribute="trailing" secondItem="oR2-G9-lxg" secondAttribute="trailing" id="CIl-vB-Zf4"/>
+                            <constraint firstItem="oR2-G9-lxg" firstAttribute="top" secondItem="6MR-9R-aQl" secondAttribute="bottom" constant="10" id="ENN-9r-Fw9"/>
+                            <constraint firstItem="oR2-G9-lxg" firstAttribute="centerX" secondItem="DTh-hs-X0B" secondAttribute="centerX" id="Fgk-zR-9vU"/>
+                            <constraint firstItem="6MR-9R-aQl" firstAttribute="leading" secondItem="oR2-G9-lxg" secondAttribute="leading" id="KQs-be-EnQ"/>
+                            <constraint firstItem="W42-fJ-7PV" firstAttribute="top" secondItem="lOe-QV-2o3" secondAttribute="bottom" constant="5" id="XDW-dE-vZK"/>
+                            <constraint firstItem="W42-fJ-7PV" firstAttribute="leading" secondItem="oR2-G9-lxg" secondAttribute="leading" id="gcT-q0-r94"/>
+                            <constraint firstItem="lOe-QV-2o3" firstAttribute="leading" secondItem="oR2-G9-lxg" secondAttribute="leading" id="jUz-uG-Xd5"/>
+                            <constraint firstItem="W42-fJ-7PV" firstAttribute="trailing" secondItem="oR2-G9-lxg" secondAttribute="trailing" id="wOu-fF-RAu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ai0-3V-HMO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="iconView" destination="oR2-G9-lxg" id="kzR-dk-IyV"/>
+                        <outlet property="msgLabel" destination="W42-fJ-7PV" id="LM0-FB-9NK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1eU-iK-ADe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="168"/>
+        </scene>
+    </scenes>
+</document>
