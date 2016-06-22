@@ -1,2 +1,2 @@
 # QR-Code-SY
-QR Code (二维码) —SY(四爷)
+四爷——二维码
